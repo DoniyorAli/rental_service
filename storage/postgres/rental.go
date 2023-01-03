@@ -139,7 +139,7 @@ func (psql Postgres) GetRentalList(limit, offset int, search string) (*rental.Ge
 }
 
 // *=========================================================================
-func (psql Postgres) UpdateRental(id string, box *rental.UpdateRentalRequest) error {
+func (psql Postgres) UpdateRental(box *rental.UpdateRentalRequest) error {
 
 	res, err := psql.homeDB.NamedExec(`
 	UPDATE "rentals"  
