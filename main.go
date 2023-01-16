@@ -64,5 +64,4 @@ func main() {
 	if err := newS.Serve(listener); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
-
 }
