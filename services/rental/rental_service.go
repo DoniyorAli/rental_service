@@ -54,7 +54,7 @@ func (rs *RentalService) GetRentalByID(ctx context.Context, req *rental.GetRenta
 
 // ?===============================================================================================================
 func (rs *RentalService) GetRentalList(ctx context.Context, req *rental.GetRentalListRequest) (*rental.GetRentalListResponse, error) {
-	res, err := rs.Stg.GetRentalList(int(req.Offset), int(req.Limit), req.Search)
+	res, err := rs.Stg.GetRentalList(int(req.Limit), int(req.Offset), req.Search)
 	if err != nil {
 		return nil, status.Errorf(codes.NotFound, "rs.Stg.GetRentalList: %s", err.Error())
 	}
